@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xfdf xmlns="http://ns.adobe.com/xfdf/" xml:space="preserve">
+	<f href="test.pdf" />
+    <ids original="dea908475893bf421f16915827b4ac4e" modified="1551984066" />
+    <fields>
+		<field name="example_field_number_one">
+			<value>
+
+
+
+
+
+
+                Here is some multiline text starting with some empty lines because.
+                Many lines in fact.
+                They can also contain umlauts and unicode stuff like ü, è, œ and such.
+
+
+
+            </value>
+		</field>
+        <field name="name_field">
+			<value>Günter Herbert</value>
+		</field>
+        <field name="age_field">
+			<value>91</value>
+		</field>
+        <field name="free_text_field">
+            Congratulations, you won a free foobar!
+
+            To get it you need to pay 500 internet fame points to example.com.
+        </field>
+    </fields>
+</xfdf>
