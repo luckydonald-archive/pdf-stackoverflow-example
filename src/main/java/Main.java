@@ -15,13 +15,18 @@ import java.util.stream.Collectors;
  */
 public class Main {
     public static void main(String[] args) throws IOException {
-        String val, valNoFormat, inputFileName;
+        String inputFileName = "test.pdf";
 
-        inputFileName = "test.pdf";
-
-        val = "<?xml version=\"1.0\"?>"
-                + "<body xmlns=\"http://www.w3.org/1999/xhtml\"><p style=\"color:#FF0000;\">Red&#13;</p><p style=\"color:#1E487C;\">Blue&#13;</p></body>";
-        valNoFormat = "Red\rBlue\r";
+        String val = "<?xml version=\"1.0\"?>"
+                + "<body xmlns=\"http://www.w3.org/1999/xhtml\">"
+                +   "<p style=\"color:#FF0000;font-size:8pt;\">"
+                +       "<i>Small</i> <b>Red</b>&#13;"
+                +   "</p>"
+                +   "<p style=\"color:#00FF00;font-size:20pt;\">"
+                +       "<i>Big</i> <b>Green</b>&#13;"
+                +   "</p>"
+                + "</body>";
+        String valNoFormat = "Small Red\rBig Green\r";
 
         PDDocument pdf_document = PDDocument.load(new File(inputFileName));
         PDAcroForm acroForm = pdf_document.getDocumentCatalog().getAcroForm();
